@@ -1,6 +1,6 @@
-package com.github.catppuccin.jetbrains_icons.patcher
+package com.github.mousechannel.jetbrains_icons.patcher
 
-import com.github.catppuccin.jetbrains_icons.settings.PluginSettingsState
+import com.github.mousechannel.jetbrains_icons.settings.PluginSettingsState
 import com.intellij.openapi.util.IconLoader
 import com.intellij.openapi.util.IconPathPatcher
 import kotlinx.coroutines.sync.Mutex

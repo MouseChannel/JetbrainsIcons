@@ -1,14 +1,15 @@
-package com.github.catppuccin.jetbrains_icons.settings
+package com.github.mousechannel.jetbrains_icons.settings
 
-import com.github.catppuccin.jetbrains_icons.settings.views.SettingsAboutView
-import com.github.catppuccin.jetbrains_icons.settings.views.SettingsAdditionalSupportView
-import com.github.catppuccin.jetbrains_icons.settings.views.SettingsHeaderView
-import com.github.catppuccin.jetbrains_icons.settings.views.SettingsIconPackView
+import com.github.mousechannel.jetbrains_icons.settings.views.SettingsAboutView
+import com.github.mousechannel.jetbrains_icons.settings.views.SettingsAdditionalSupportView
+import com.github.mousechannel.jetbrains_icons.settings.views.SettingsHeaderView
+import com.github.mousechannel.jetbrains_icons.settings.views.SettingsIconPackView
 import com.intellij.ui.TitledSeparator
 import com.intellij.util.ui.FormBuilder
 import javax.swing.JPanel
 
 enum class Variant(val id: String, private val label: String) {
+  MOUSECHANNEL("mousechannel", "MouseChannel"),
   LATTE("latte", "Catppuccin Latte"),
   FRAPPE("frappe", "Catppuccin Frappé"),
   MACCHIATO("macchiato", "Catppuccin Macchiato"),

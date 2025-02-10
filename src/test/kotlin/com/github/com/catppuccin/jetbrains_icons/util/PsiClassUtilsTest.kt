@@ -1,6 +1,6 @@
 package com.github.com.catppuccin.jetbrains_icons.util
 
-import com.github.catppuccin.jetbrains_icons.util.PsiClassUtils
+import com.github.mousechannel.jetbrains_icons.util.PsiClassUtils
 import com.intellij.testFramework.fixtures.LightJavaCodeInsightFixtureTestCase5
 import com.intellij.testFramework.runInEdtAndGet
 import org.junit.jupiter.api.Assertions.assertFalse

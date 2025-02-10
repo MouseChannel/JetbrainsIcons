@@ -1,6 +1,6 @@
-package com.github.catppuccin.jetbrains_icons.settings
+package com.github.mousechannel.jetbrains_icons.settings
 
-import com.github.catppuccin.jetbrains_icons.bundles.PluginSettingsBundle
+import com.github.mousechannel.jetbrains_icons.bundles.PluginSettingsBundle
 import com.intellij.ide.GeneralSettings
 import com.intellij.ide.projectView.ProjectView
 import com.intellij.openapi.application.ApplicationManager

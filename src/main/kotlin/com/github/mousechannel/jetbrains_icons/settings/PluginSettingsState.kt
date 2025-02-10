@@ -1,4 +1,4 @@
-package com.github.catppuccin.jetbrains_icons.settings
+package com.github.mousechannel.jetbrains_icons.settings
 
 import com.intellij.ide.plugins.PluginManager.isPluginInstalled
 import com.intellij.openapi.application.ApplicationManager
@@ -9,11 +9,11 @@ import com.intellij.openapi.extensions.PluginId.getId
 import com.intellij.util.xmlb.XmlSerializerUtil
 
 @State(
-  name = "com.github.catppuccin.jetbrains_icons.settings.PluginSettingsState",
-  storages = [Storage("CatppuccinIcons.xml")],
+  name = "com.github.mousechannel.jetbrains_icons.settings.PluginSettingsState",
+  storages = [Storage("MouseChannelIcons.xml")],
 )
 class PluginSettingsState : PersistentStateComponent<PluginSettingsState> {
-  var variant = Variant.MOCHA.id
+  var variant = Variant.MOUSECHANNEL.id
 
   var pythonSupport = true
   var javaSupport = isPluginInstalled(getId("com.intellij.java"))

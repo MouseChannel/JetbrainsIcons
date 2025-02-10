@@ -1,8 +1,8 @@
-package com.github.catppuccin.jetbrains_icons.providers
+package com.github.mousechannel.jetbrains_icons.providers
 
-import com.github.catppuccin.jetbrains_icons.IconPack.icons
-import com.github.catppuccin.jetbrains_icons.settings.PluginSettingsState
-import com.github.catppuccin.jetbrains_icons.util.PsiClassUtils
+import com.github.mousechannel.jetbrains_icons.IconPack.icons
+import com.github.mousechannel.jetbrains_icons.settings.PluginSettingsState
+import com.github.mousechannel.jetbrains_icons.util.PsiClassUtils
 import com.intellij.icons.AllIcons
 import com.intellij.ide.IconProvider
 import com.intellij.ide.projectView.ProjectView

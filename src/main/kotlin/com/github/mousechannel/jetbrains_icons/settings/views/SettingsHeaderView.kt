@@ -1,4 +1,4 @@
-package com.github.catppuccin.jetbrains_icons.settings.views
+package com.github.mousechannel.jetbrains_icons.settings.views
 
 import java.awt.Dimension
 import java.awt.Image

@@ -1,7 +1,7 @@
-package com.github.catppuccin.jetbrains_icons.activity
+package com.github.mousechannel.jetbrains_icons.activity
 
-import com.github.catppuccin.jetbrains_icons.patcher.GoIconPatcher
-import com.github.catppuccin.jetbrains_icons.patcher.PythonIconPatcher
+import com.github.mousechannel.jetbrains_icons.patcher.GoIconPatcher
+import com.github.mousechannel.jetbrains_icons.patcher.PythonIconPatcher
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 import com.intellij.openapi.util.IconPathPatcher

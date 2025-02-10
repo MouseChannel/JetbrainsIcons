@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "generate/vscode-icons/src/*"
+//        "generate/vscode-icons/src/*",
+        "generate/vscode-material-icon-theme/src/*"
+
       ]
     },
     "moduleResolution": "node",

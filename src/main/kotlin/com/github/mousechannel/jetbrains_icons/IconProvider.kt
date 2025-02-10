@@ -1,6 +1,6 @@
-package com.github.catppuccin.jetbrains_icons
+package com.github.mousechannel.jetbrains_icons
 
-import com.github.catppuccin.jetbrains_icons.IconPack.icons
+import com.github.mousechannel.jetbrains_icons.IconPack.icons
 import com.intellij.ide.IconProvider
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiElement

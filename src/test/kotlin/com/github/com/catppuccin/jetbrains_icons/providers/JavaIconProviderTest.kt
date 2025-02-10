@@ -1,8 +1,8 @@
-package com.github.com.catppuccin.jetbrains_icons.providers
+package com.github.com.mousechannel.jetbrains_icons.providers
 
-import com.github.catppuccin.jetbrains_icons.Icons
-import com.github.catppuccin.jetbrains_icons.providers.JavaIconProvider
-import com.github.catppuccin.jetbrains_icons.settings.PluginSettingsState
+import com.github.mousechannel.jetbrains_icons.Icons
+import com.github.mousechannel.jetbrains_icons.providers.JavaIconProvider
+import com.github.mousechannel.jetbrains_icons.settings.PluginSettingsState
 import com.intellij.icons.AllIcons
 import com.intellij.ide.projectView.impl.ProjectViewState
 import com.intellij.testFramework.fixtures.LightJavaCodeInsightFixtureTestCase5
@@ -25,7 +25,7 @@ class JavaIconProviderTest : LightJavaCodeInsightFixtureTestCase5() {
 
   override fun getTestDataPath(): String = "src/test/testData"
 
-  private val icons = Icons("mocha")
+  private val icons = Icons("mousechannel")
   private val provider = JavaIconProvider()
 
   @BeforeEach

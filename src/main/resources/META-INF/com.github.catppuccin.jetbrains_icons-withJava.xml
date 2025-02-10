@@ -1,7 +1,7 @@
 <idea-plugin>
   <extensions defaultExtensionNs="com.intellij">
     <iconProvider
-      implementation="com.github.catppuccin.jetbrains_icons.providers.JavaIconProvider"
+      implementation="com.github.mousechannel.jetbrains_icons.providers.JavaIconProvider"
       order="first"
       id="JavaIconProvider"
     />

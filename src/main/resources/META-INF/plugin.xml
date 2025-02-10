@@ -1,7 +1,7 @@
 <idea-plugin>
-  <id>com.github.catppuccin.jetbrains_icons</id>
-  <name>Catppuccin Icons</name>
-  <vendor url="https://github.com/catppuccin">Catppuccin</vendor>
+  <id>com.github.mousechannel.jetbrains_icons</id>
+  <name>MOuseChannel Icons</name>
+  <vendor url="https://github.com/MouseChannel">MouseChannel</vendor>
   <description><![CDATA[
 <h2>🦊 Soothing pastel icons for JetBrains IDEs</h2>
 
@@ -12,7 +12,9 @@ This is an <strong>icon pack</strong> designed to be used with the <a href="http
 <h3>Usage</h3>
 
 <ol>
+<!--  <li>Head to <strong>Settings</strong> → <strong>Appearance & Behavior</strong> → <strong>Catppuccin Icons</strong></li>-->
   <li>Head to <strong>Settings</strong> → <strong>Appearance & Behavior</strong> → <strong>Catppuccin Icons</strong></li>
+
   <li>Select a flavor for the icons to use.</li>
   <li>Restart your IDE.</li>
   <li>Enjoy your new icons!</li>
@@ -36,21 +38,21 @@ For further help, see also:
   <depends optional="true" config-file="com.github.catppuccin.jetbrains_icons-withJava.xml">com.intellij.java</depends>
   <extensions defaultExtensionNs="com.intellij">
     <iconProvider
-      implementation="com.github.catppuccin.jetbrains_icons.IconProvider"
+      implementation="com.github.mousechannel.jetbrains_icons.IconProvider"
       order="first"
       id="IconProvider"
     />
     <applicationConfigurable
       parentId="appearance"
-      groupId="com.github.catppuccin.jetbrains_icons"
-      displayName="Catppuccin Icons"
-      instance="com.github.catppuccin.jetbrains_icons.settings.PluginSettings"
+      groupId="com.github.mousechannel.jetbrains_icons"
+      displayName="MouseChannel Icon"
+      instance="com.github.mousechannel.jetbrains_icons.settings.PluginSettings"
       id="PluginSettings"
     />
     <applicationService
-      serviceImplementation="com.github.catppuccin.jetbrains_icons.settings.PluginSettingsState"
+      serviceImplementation="com.github.mousechannel.jetbrains_icons.settings.PluginSettingsState"
     />
-    <postStartupActivity implementation="com.github.catppuccin.jetbrains_icons.activity.IconPathPatcherActivity"/>
+    <postStartupActivity implementation="com.github.mousechannel.jetbrains_icons.activity.IconPathPatcherActivity"/>
   </extensions>
   <extensions defaultExtensionNs="com.intellij.kotlin">
     <supportsKotlinPluginMode supportsK2="true"/>

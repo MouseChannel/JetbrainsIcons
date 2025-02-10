@@ -1,4 +1,4 @@
-package com.github.catppuccin.jetbrains_icons.util
+package com.github.mousechannel.jetbrains_icons.util
 
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiClassType
