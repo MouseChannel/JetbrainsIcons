@@ -1,6 +1,6 @@
 import {mkdirSync, readdirSync, readFileSync, writeFileSync} from 'fs';
-import {fileNames, fileExtensions} from "@/defaults/fileIcons";
-import {folderNames} from "@/defaults/folderIcons";
+// import {fileNames, fileExtensions} from "@/defaults/fileIcons";
+// import {folderNames} from "@/defaults/folderIcons";
 import {folderIcons} from "@/icons/folderIcons"
 import {fileIcons} from "@/icons/fileIcons";
 
@@ -24,7 +24,7 @@ function generateIcons(variant: string) {
 // VSCode sometimes doesn't need the `fileExtension` block to be populated but that affects JetBrains so we can add our
 // own extensions/overrides here if need be.
 const customFileExtensions = {razor: "razor"}
-const extendedFileExtensions = {...fileExtensions, ...customFileExtensions}
+// const extendedFileExtensions = {...fileExtensions, ...customFileExtensions}
 
 let folder_icons = folderIcons[0]['icons']
 let file_icons = fileIcons['icons']
