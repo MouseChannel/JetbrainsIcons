@@ -1,7 +1,9 @@
 package com.github.mousechannel.jetbrains_icons
 
 import com.github.mousechannel.jetbrains_icons.IconPack.icons
+import com.intellij.ide.FileIconProvider
 import com.intellij.ide.IconProvider
+import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
@@ -13,7 +15,20 @@ import javax.swing.Icon
  * Provides icons for all file types unless a class under `providers/` handles something more
  * specific.
  */
-class IconProvider : IconProvider() {
+class IconProvider : IconProvider(), FileIconProvider {
+
+  /**
+   * Entry point used by the platform for VirtualFile-based icon lookup (e.g. Project view,
+   * editor tabs). Many IDEs (CLion, GoLand, etc.) resolve file icons via FileIconProvider
+   * rather than the PsiElement-based IconProvider, so we implement both.
+   */
+  override fun getIcon(file: VirtualFile, flags: Int, project: Project?): Icon? {
+    val psiFile = project?.let { PsiManager.getInstance(it).findFile(file) }
+    if (fileTypesByProviders.any { file.name.endsWith(it) }) {
+      return null
+    }
+    return findIcon(file, psiFile)
+  }
   /**
    * Overrides of filenames to icons. If the filename matches (case-insensitive), then return this
    * icon.

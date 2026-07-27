@@ -1,11 +1,22 @@
 <idea-plugin>
   <id>com.github.mousechannel.jetbrains_icons</id>
-  <name>MOuseChannel Icons</name>
+  <name>MouseChannel Icons</name>
   <vendor url="https://github.com/MouseChannel">MouseChannel</vendor>
   <description><![CDATA[
-<h2>Mousechanel Icons</h2>
-same as   <li><a href="https://github.com/MouseChannel/vscode-material-icon-theme" target="_blank">mousechannel vscode icons</a></li>
-]]></description>
+    <h2>MouseChannel Icons</h2>
+    <p>
+      A file &amp; folder icon theme for JetBrains IDEs, ported from the
+      <a href="https://github.com/MouseChannel/vscode-material-icon-theme">MouseChannel VSCode Material Icon Theme</a>.
+    </p>
+    <ul>
+      <li>Replaces file icons for hundreds of languages, frameworks and tools.</li>
+      <li>Replaces folder icons with context-aware variants (src, test, config, docker, node, ...).</li>
+      <li>Works with IntelliJ IDEA, CLion, PyCharm, GoLand, WebStorm, Rider, and other JetBrains IDEs based on the IntelliJ Platform.</li>
+    </ul>
+    <p>
+      Toggle or configure the pack in <b>Settings / Preferences → Appearance &amp; Behavior → Appearance → MouseChannel Icon</b>.
+    </p>
+  ]]></description>
   <depends>com.intellij.modules.platform</depends>
   <depends optional="true" config-file="com.github.catppuccin.jetbrains_icons-withKotlin.xml">org.jetbrains.kotlin
   </depends>
@@ -13,8 +24,9 @@ same as   <li><a href="https://github.com/MouseChannel/vscode-material-icon-them
   <extensions defaultExtensionNs="com.intellij">
     <iconProvider
       implementation="com.github.mousechannel.jetbrains_icons.IconProvider"
-      order="first"
-      id="IconProvider"
+    />
+    <fileIconProvider
+      implementation="com.github.mousechannel.jetbrains_icons.IconProvider"
     />
     <applicationConfigurable
       parentId="appearance"
