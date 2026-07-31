@@ -4,6 +4,29 @@ import {mkdirSync, readdirSync, readFileSync, writeFileSync} from 'fs';
 import {folderIcons} from "@/icons/folderIcons"
 import {fileIcons} from "@/icons/fileIcons";
 
+/**
+ * Normalize SVGs authored with an ElementTree-style "ns0:" prefix binding for
+ * the SVG namespace. JSVG (used by IntelliJ 262+) throws
+ * "IllegalStateException: No current node to end" when it encounters an SVG
+ * root with a prefixed namespace instead of the default xmlns.
+ *
+ * We rewrite `xmlns:ns0="http://www.w3.org/2000/svg"` to `xmlns="..."` and
+ * strip every `ns0:` element prefix.
+ */
+function normalizeSvgNamespace(data: string): string {
+  // Detect prefix bound to the SVG namespace, e.g. xmlns:ns0="http://www.w3.org/2000/svg"
+  const bindingRe = /\sxmlns:([a-zA-Z_][\w-]*)\s*=\s*(["'])http:\/\/www\.w3\.org\/2000\/svg\2/;
+  const m = data.match(bindingRe);
+  if (!m) return data;
+  const prefix = m[1];
+  // Rewrite the binding to the default xmlns declaration
+  data = data.replace(bindingRe, ` xmlns="http://www.w3.org/2000/svg"`);
+  // Strip the prefix from all element open/close tags: <prefix:name  and </prefix:name
+  const stripRe = new RegExp(`(<\\/?)${prefix}:`, 'g');
+  data = data.replace(stripRe, '$1');
+  return data;
+}
+
 function generateIcons(variant: string) {
   mkdirSync('src/main/resources/jetbrains_icons/icons', {recursive: true});
   // readdirSync(`generate/vscode-icons/icons/${variant}`).forEach((file) => {
@@ -16,6 +39,7 @@ function generateIcons(variant: string) {
     // writeFileSync(`src/main/resources/jetbrains_icons/icons/${variant}_${file}`, data, {encoding: 'utf-8'})
 
     let data = readFileSync(`generate/vscode-material-icon-theme/icons/${file}`, {encoding: 'utf-8'})
+    data = normalizeSvgNamespace(data)
     writeFileSync(`src/main/resources/jetbrains_icons/icons/${variant}_${file}`, data, {encoding: 'utf-8'})
 
   });

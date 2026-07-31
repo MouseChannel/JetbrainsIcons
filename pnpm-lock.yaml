@@ -11,6 +11,9 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.13.11
+      '@xmldom/xmldom':
+        specifier: ^0.9.10
+        version: 0.9.10
       tsx:
         specifier: ^4.7.0
         version: 4.19.3
@@ -173,6 +176,10 @@ packages:
   '@types/node@22.13.11':
     resolution: {integrity: sha512-iEUCUJoU0i3VnrCmgoWCXttklWcvoCIx4jzcP22fioIVSdTmjgoEvmAO/QPw6TcS9k5FrNgn4w7q5lGOd1CT5g==}
 
+  '@xmldom/xmldom@0.9.10':
+    resolution: {integrity: sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==}
+    engines: {node: '>=14.6'}
+
   esbuild@0.25.0:
     resolution: {integrity: sha512-BXq5mqc8ltbaN34cDqWuYKyNhX8D/Z0J1xdtdQ8UcIIIyJyz+ZMKUt58tF3SrZ85jcfN/PZYhjR5uDQAYNVbuw==}
     engines: {node: '>=18'}
@@ -282,6 +289,8 @@ snapshots:
   '@types/node@22.13.11':
     dependencies:
       undici-types: 6.20.0
+
+  '@xmldom/xmldom@0.9.10': {}
 
   esbuild@0.25.0:
     optionalDependencies:
